@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Mania | Osu! Mania Content Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap');
+        
+        :root {
+            --github-dark: #0d1117;
+            --github-gray: #161b22;
+            --github-light: #f0f6fc;
+            --github-blue: #58a6ff;
+            --mania-pink: #dd77bb;
+        }
+        
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: var(--github-dark);
+            color: var(--github-light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .mono {
+            font-family: 'Ubuntu Mono', monospace;
+        }
+        
+        .repo-card {
+            background-color: var(--github-gray);
+            border: 1px solid #30363d;
+            border-radius: 6px;
+        }
+        
+        .repo-card:hover {
+            border-color: var(--github-blue);
+        }
+        
+        .nav-link {
+            color: var(--github-light);
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-link:hover {
+            color: var(--github-blue);
+            border-bottom-color: var(--github-blue);
+        }
+        
+        .btn-primary {
+            background-color: var(--mana-pink);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #cc66aa;
+        }
+        
+        .key-visualizer {
+            height: 8px;
+            background: var(--mania-pink);
+            transition: all 0.05s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- GitHub Style Navigation -->
+    <nav class="bg-gray-900 border-b border-gray-700 py-4 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 text-pink-500" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,10L12,15L17,10H13V7H11V10H7Z" />
+                    </svg>
+                    <span class="ml-2 text-xl font-bold mono">AgentMania</span>
+                </div>
+                <div class="hidden md:flex space-x-6 ml-6">
+                    <a href="#home" class="nav-link py-1">Home</a>
+                    <a href="#videos" class="nav-link py-1">Videos</a>
+                    <a href="#skins" class="nav-link py-1">My Skins</a>
+                    <a href="#settings" class="nav-link py-1">Game Settings</a>
+                    <a href="#about" class="nav-link py-1">About</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-300 hover:text-white">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-white">
+                    <i class="fab fa-twitch text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-white">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-1 rounded-md mono text-sm">
+                    Follow
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        <!-- Profile Header -->
+        <section id="home" class="flex flex-col md:flex-row gap-8 mb-12">
+            <div class="flex-shrink-0">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a92b59c5-30d9-4270-bc4b-f278334518dd.png" alt="Agent Mania profile picture showing content creator wearing headphones with osu! mania background" 
+                    class="rounded-lg w-64 h-64 object-cover border-2 border-pink-500">
+            </div>
+            <div class="flex-grow">
+                <h1 class="text-3xl font-bold mono">Agent Mania</h1>
+                <p class="text-gray-400 mb-4 mono">osu!mania player & content creator</p>
+                
+                <div class="flex items-center space-x-4 mb-4">
+                    <span class="text-gray-400 mono">
+                        <i class="fas fa-map-marked-alt text-pink-500"></i> Ranked #3,214
+                    </span>
+                    <span class="text-gray-400 mono">
+                        <i class="fas fa-star text-pink-500"></i> 45,000 PP
+                    </span>
+                    <span class="text-gray-400 mono">
+                        <i class="fas fa-users text-pink-500"></i> 12.8k subscribers
+                    </span>
+                </div>
+                
+                <p class="text-gray-300 mb-6">
+                    Hi! I'm Agent Mania, an osu!mania player specializing in 4K and 7K gameplay. I create educational 
+                    content, entertaining gameplay videos, and helpful map packs for players of all skill levels. 
+                    Check out my latest videos below!
+                </p>
+                
+                <div class="flex flex-wrap gap-2">
+                    <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-md mono">
+                        <i class="fas fa-play mr-2"></i> Latest Video
+                    </button>
+                    <button class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-md mono">
+                        <i class="fas fa-paint-brush mr-2"></i> My Skins
+                    </button>
+                    <button class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-md mono">
+                        <i class="fas fa-cog mr-2"></i> Game Settings
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Osu! Mania Logo Section -->
+        <section class="bg-gray-800 rounded-lg p-6 mb-12 flex items-center justify-center">
+            <div class="text-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a29bb5fc-2142-43e9-8b59-f1e7ac67b2ce.png" alt="osu!mania logo with keyboard keys visualization" class="mx-auto mb-4">
+                <h2 class="text-2xl font-bold mono text-pink-500 mb-2">Specializing in 4K & 7K Gameplay</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Creating content focused on helping players improve their timing, speed, and accuracy 
+                    in this rhythm game variant. From beginner tutorials to high-level gameplay analysis.
+                </p>
+                
+                <!-- Key Visualizer -->
+                <div class="flex justify-center mt-6 space-x-1 h-8">
+                    <div class="key-visualizer bg-pink-500 w-12" style="height: 6px;"></div>
+                    <div class="key-visualizer bg-pink-400 w-12" style="height: 12px;"></div>
+                    <div class="key-visualizer bg-pink-500 w-12" style="height: 20px;"></div>
+                    <div class="key-visualizer bg-pink-600 w-12" style="height: 16px;"></div>
+                    <div class="key-visualizer bg-pink-500 w-12" style="height: 8px;"></div>
+                    <div class="key-visualizer bg-pink-400 w-12" style="height: 24px;"></div>
+                    <div class="key-visualizer bg-pink-500 w-12" style="height: 12px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Videos Section -->
+        <section id="videos" class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold mono">Recent Videos</h2>
+                <a href="#" class="text-pink-500 hover:text-pink-400 mono">View all →</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Video Card 1 -->
+                <div class="repo-card p-4 transition-all hover:border-pink-500">
+                    <div class="aspect-w-16 aspect-h-9 mb-3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5b00494b-dd38-4c69-b18e-431f1bd0d2d4.png" alt="Video thumbnail showing 7K Mania gameplay with rainbow notes" class="rounded-lg w-full">
+                    </div>
+                    <h3 class="font-bold mono">7K Speed Challenge - 300BPM</h3>
+                    <p class="text-sm text-gray-400 mb-3">Pushing my limits on this insane 7K map</p>
+                    <div class="flex justify-between text-xs text-gray-500 mono">
+                        <span><i class="fas fa-eye mr-1"></i> 12.4k views</span>
+                        <span><i class="fas fa-calendar-alt mr-1"></i> 3 days ago</span>
+                    </div>
+                </div>
+                
+                <!-- Video Card 2 -->
+                <div class="repo-card p-4 transition-all hover:border-pink-500">
+                    <div class="aspect-w-16 aspect-h-9 mb-3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6c7c82dc-4bde-45ed-92b5-9dfb5f52e773.png" alt="Video thumbnail with keyboard overlay showing 4K finger positioning" class="rounded-lg w-full">
+                    </div>
+                    <h3 class="font-bold mono">4K Finger Control Guide</h3>
+                    <p class="text-sm text-gray-400 mb-3">Improve your finger independence for complex patterns</p>
+                    <div class="flex justify-between text-xs text-gray-500 mono">
+                        <span><i class="fas fa-eye mr-1"></i> 8.7k views</span>
+                        <span><i class="fas fa-calendar-alt mr-1"></i> 1 week ago</span>
+                    </div>
+                </div>
+                
+                <!-- Video Card 3 -->
+                <div class="repo-card p-4 transition-all hover:border-pink-500">
+                    <div class="aspect-w-16 aspect-h-9 mb-3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/95f3e0c8-3ab0-410e-bd3e-b9ea40f7aa92.png" alt="Video thumbnail showing FC (full combo) celebration screen" class="rounded-lg w-full">
+                    </div>
+                    <h3 class="font-bold mono">FINALLY FC'd Freedom Dive!</h3>
+                    <p class="text-sm text-gray-400 mb-3">After 200+ attempts, finally got that perfect run</p>
+                    <div class="flex justify-between text-xs text-gray-500 mono">
+                        <span><i class="fas fa-eye mr-1"></i> 15.2k views</span>
+                        <span><i class="fas fa-calendar-alt mr-1"></i> 2 weeks ago</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Skins -->
+        <section id="skins" class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold mono">My Skins</h2>
+                <a href="#" class="text-pink-500 hover:text-pink-400 mono">View all →</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Skin 1 -->
+                <div class="repo-card p-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-gray-700 rounded-lg p-3 mr-4">
+                            <i class="fas fa-paint-brush text-pink-500 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mono text-lg mb-1">AgentMania 4K Skin</h3>
+                            <p class="text-sm text-gray-400 mb-3">Clean, minimal skin optimized for tournament play</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-700 text-pink-400 px-2 py-1 rounded-full mono">4 Keys</span>
+                                <span class="text-xs bg-gray-700 text-blue-400 px-2 py-1 rounded-full mono">HD-SD</span>
+                                <span class="text-xs bg-gray-700 text-green-400 px-2 py-1 rounded-full mono">v1.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skin 2 -->
+                <div class="repo-card p-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-gray-700 rounded-lg p-3 mr-4">
+                            <i class="fas fa-paint-brush text-pink-500 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mono text-lg mb-1">7K Minimalist Skin</h3>
+                            <p class="text-sm text-gray-400 mb-3">High contrast skin for 7K focused on readability</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-700 text-pink-400 px-2 py-1 rounded-full mono">7 Keys</span>
+                                <span class="text-xs bg-gray-700 text-blue-400 px-2 py-1 rounded-full mono">HD Only</span>
+                                <span class="text-xs bg-gray-700 text-yellow-400 px-2 py-1 rounded-full mono">v2.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Settings -->
+        <section id="settings" class="mb-12">
+            <div class="repo-card p-6">
+                <h2 class="text-2xl font-bold mono mb-4">My Game Settings</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mono mb-3 text-pink-500">Visual Settings</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Resolution: 1920x1080 @ 240Hz</li>
+                            <li>Background dim: 90%</li>
+                            <li>Hit lighting: Disabled</li>
+                            <li>Combo bursts: Disabled</li>
+                            <li>Score meter: Hidden</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mono mb-3 text-pink-500">Gameplay Settings</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Scroll speed: 28</li>
+                            <li>Hit position: 125</li>
+                            <li>Key binds: Custom layout</li>
+                            <li>Offset: -1ms</li>
+                            <li>Global leaderboards: Enabled</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-16">
+            <div class="repo-card p-8">
+                <h2 class="text-2xl font-bold mono mb-6">About Agent Mania</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mono mb-3 text-pink-500">My Journey</h3>
+                        <p class="text-gray-400 mb-4">
+                            Started playing osu!mania in 2018 as a casual player. After reaching top 10,000 globally, 
+                            I began creating content to help others improve. My channel focuses on educational 
+                            gameplay analysis, technique tutorials, and entertaining challenge runs.
+                        </p>
+                        <p class="text-gray-400">
+                            When I'm not playing, I'm mapping new charts or coaching players through my Discord community.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mono mb-3 text-pink-500">Content Focus</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Detailed finger positioning guides</li>
+                            <li>Pattern recognition tutorials</li>
+                            <li>Custom training maps</li>
+                            <li>Live plays with commentary</li>
+                            <li>Monthly improvement challenges</li>
+                            <li>Equipment and setup recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <svg class="w-8 h-8 text-pink-500" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,10L12,15L17,10H13V7H11V10H7Z" />
+                    </svg>
+                    <span class="ml-2 text-xl font-bold mono">AgentMania</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-pink-500">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500">
+                        <i class="fab fa-twitch text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500">
+                        <i class="fab fa-discord text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-gray-800 text-center text-gray-500 text-sm mono">
+                &copy; 2023 Agent Mania. Not affiliated with ppy or osu!.<br>
+                All game content is property of their respective owners.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
